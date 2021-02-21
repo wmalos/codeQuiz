@@ -1,6 +1,19 @@
+// create start button
+let startQuiz = document.createElement("button");
+  startQuiz.setAttribute("id", "startQuiz");
+  startQuiz.setAttribute("class", "btn btn-secondary");
+  startQuiz.textContent= "Start Quiz";
+
 // create event listener for start button
 // starts timer and first question
+var startButton = document.querySelector("#startQuiz");
 
+
+function startFunction() {
+    startQuiz.addEventListener("click", function () {
+        playQuiz(questions);
+      });
+}
 // create function that runs timer
 // stop timer at zero
 // call game over function at zero
@@ -42,3 +55,4 @@ var questions = [
 // stops timer
 
 // create scoreboard function into local storage
+let savedScores = JSON.parse(localStorage.getItem("highScores"));
