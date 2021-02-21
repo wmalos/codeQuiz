@@ -21,17 +21,13 @@ function startQuiz() {
     questionContainerEl.classList.remove('hide')
     gotoNextQuestion()
 }
-// create function that runs timer
-// stop timer at zero
-// call game over function at zero
-// include set interval in timer function
-
 
 // create function that delivers question and choices
 function gotoNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
 // produces random question
 function showQuestion(question) {
     questionEl.innerText = question.question
@@ -71,6 +67,7 @@ function selectAnswer(e) {
   }
 }
 
+// Set correct and incorrect answers
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -84,6 +81,11 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
+// create function that runs timer
+// stop timer at zero
+// call game over function at zero
+// include set interval in timer function
 
 
 // subtract time on clock with incorrect answers
