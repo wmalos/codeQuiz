@@ -37,6 +37,11 @@ header {
     gap: 10px;
     margin: 20px 0;
 }
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+  }
 
 .btn:hover {
     border-color: black;

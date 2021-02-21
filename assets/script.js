@@ -1,6 +1,6 @@
 const startButton = document.getElementById('startBtn')
 const nextButton = document.getElementById('nextBtn')
-const questionContainerEl = document.getElementById('question')
+const questionContainerEl = document.getElementById('question-container')
 const questionEl = document.getElementById('question')
 const answerButtonsEl = document.getElementById('answers')
 
@@ -8,6 +8,10 @@ let shuffledQuestions, currentQuestionIndex
 
 // create event listener for start button
 startButton.addEventListener('click', startQuiz)
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    gotoNextQuestion()
+})
 
 // starts timer and first question
 function startQuiz() {
@@ -44,6 +48,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsEl.firstChild) {
         answerButtonsEl.removeChild(answerButtonsEl.firstChild)
@@ -51,11 +56,11 @@ function resetState() {
 }
 
 // function that checks answers then goes on to next question
-function selectAnswer() {
-    const selectedButton = e.target
+function selectAnswer(e) {
+  const selectedButton = e.target
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
-  Array.from(answerButtonsElement.children).forEach(button => {
+  Array.from(answerButtonsEl.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
@@ -109,8 +114,8 @@ const questions = [
     {
       question: 'The development of balance, equilibrium, postural control, muscle tone, maintaining a stable visual field while moving is called.',
       answers: [
-        { text: 'Cognitive Development', correct: true },
-        { text: 'Vestibular Development', correct: false },
+        { text: 'Cognitive Development', correct: false },
+        { text: 'Vestibular Development', correct: true },
         { text: 'Physical Development', correct: false },
         { text: 'None of the above', correct: false }
       ]
