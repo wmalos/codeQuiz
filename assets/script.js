@@ -1,12 +1,11 @@
+const startButton = document.getElementById('startBtn')
+
 // create event listener for start button
+startButton.addEventListener('click', startQuiz)
+
 // starts timer and first question
-var startButton = document.querySelector("#startQuiz");
+function startQuiz() {
 
-
-function startFunction() {
-    startQuiz.addEventListener("click", function () {
-        playQuiz(questions);
-      });
 }
 // create function that runs timer
 // stop timer at zero
@@ -40,7 +39,15 @@ var questions = [
 ]
 
 // create function that delivers question and choices
+function gotoNextQuestion() {
+
+}
+
 // function that checks answers then goes on to next question
+function selectAnswer() {
+
+}
+
 // subtract time on clock with incorrect answers
 // onClick event listener
 // look up add click on button (google)
