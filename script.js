@@ -15,8 +15,21 @@ var questions = [
         correct: "choice a" 
     },
     {
+        q: "String", 
+        choices: ["choice a", "choice b", "choice c"],
+        correct: "choice a"
+    },
+    {
+        q: "String", 
+        choices: ["choice a", "choice b", "choice c"],
+        correct: "choice a"
+    },
+    {
+        q: "String", 
+        choices: ["choice a", "choice b", "choice c"],
+        correct: "choice a"
+    },
 
-    }
 ]
 
 // create function that delivers question and choices
