@@ -1,11 +1,17 @@
 const startButton = document.getElementById('startBtn')
+const questionContainerEl = document.getElementById
+('question')
 
 // create event listener for start button
 startButton.addEventListener('click', startQuiz)
 
 // starts timer and first question
 function startQuiz() {
-
+    startButton.classList.add('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerEl.classList.remove('hide')
+    gotoNextQuestion()
 }
 // create function that runs timer
 // stop timer at zero
@@ -14,24 +20,24 @@ function startQuiz() {
 
 // create array for questions, answers, wrong answers
 // make it an array of objects
-var questions = [
+const questions = [
     {
-        q: "String", 
+        question: "String", 
         choices: ["True", "False",],
         correct: "True" 
     },
     {
-        q: "String", 
+        question: "String", 
         choices: ["True", "False"],
         correct: "False"
     },
     {
-        q: "String", 
+        question: "String", 
         choices: ["choice a", "choice b", "choice c"],
         correct: "choice a"
     },
     {
-        q: "String", 
+        question: "String", 
         choices: ["choice a", "choice b", "choice c"],
         correct: "choice a"
     },
@@ -40,8 +46,10 @@ var questions = [
 
 // create function that delivers question and choices
 function gotoNextQuestion() {
-
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+// produces random question
+function showQuestion(question)
 
 // function that checks answers then goes on to next question
 function selectAnswer() {
