@@ -1,0 +1,17 @@
+
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+
+
+
+/* adjusts for smaller screen size */
+@media (max-width: 768px) {
+    .container-fluid {
+      /* removes paddding */
+      padding-left: 0;
+      padding-right: 0;
+    }

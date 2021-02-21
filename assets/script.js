@@ -1,9 +1,3 @@
-// create start button
-let startQuiz = document.createElement("button");
-  startQuiz.setAttribute("id", "startQuiz");
-  startQuiz.setAttribute("class", "btn btn-secondary");
-  startQuiz.textContent= "Start Quiz";
-
 // create event listener for start button
 // starts timer and first question
 var startButton = document.querySelector("#startQuiz");
@@ -24,13 +18,13 @@ function startFunction() {
 var questions = [
     {
         q: "String", 
-        choices: ["choice a", "choice b", "choice c"],
-        correct: "choice a" 
+        choices: ["True", "False",],
+        correct: "True" 
     },
     {
         q: "String", 
-        choices: ["choice a", "choice b", "choice c"],
-        correct: "choice a"
+        choices: ["True", "False"],
+        correct: "False"
     },
     {
         q: "String", 
