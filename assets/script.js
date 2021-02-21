@@ -1,6 +1,9 @@
 const startButton = document.getElementById('startBtn')
-const questionContainerEl = document.getElementById
-('question')
+const questionContainerEl = document.getElementById('question')
+const questionEl = document.getElementById('question')
+const answerButtonsEl = document.getElementById('answers')
+
+let shuffledQuestions, currentQuestionIndex
 
 // create event listener for start button
 startButton.addEventListener('click', startQuiz)
@@ -22,34 +25,21 @@ function startQuiz() {
 // make it an array of objects
 const questions = [
     {
-        question: "String", 
-        choices: ["True", "False",],
-        correct: "True" 
-    },
-    {
-        question: "String", 
-        choices: ["True", "False"],
-        correct: "False"
-    },
-    {
-        question: "String", 
-        choices: ["choice a", "choice b", "choice c"],
-        correct: "choice a"
-    },
-    {
-        question: "String", 
-        choices: ["choice a", "choice b", "choice c"],
-        correct: "choice a"
-    },
-
-]
-
+        question: 'What is lbla bala',
+        answers: [
+            { text: 'sdfasd', correct: true},
+            { text: 'sdfadsa', correct: false}
+        ] 
+    }
+] 
 // create function that delivers question and choices
 function gotoNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 // produces random question
-function showQuestion(question)
+function showQuestion(question) {
+    questionEl.innerText = question.question
+}
 
 // function that checks answers then goes on to next question
 function selectAnswer() {

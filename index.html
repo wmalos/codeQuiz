@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
-    <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="assets/style.css" rel="stylesheet">
+  
+  <title>Quiz App</title>
 </head>
 <body>
-    <div class="container">
-    <header>Coding Quiz</header>
+  <div class="container">
+    <div id="question" class="hide">
+      <div id="question">Question</div>
+      <div id="buttons" class="btnGrid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
     </div>
-<!-- Create start button -->
-    <div class="container">
-        <div id="question" class="hide"></div>
-            <div id="question">Question</div>
-            <div id="answers" class="btnGrid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 1</button>
-            </div>
-
-        <div class="buttons">
-            <button id="startBtn" class="startBtn btn">Start Quiz</button>
-            <button id="nextBtn" class="nextBtn btn hide">Next</button> 
-        </div>
+    <div class="controls">
+      <button id="startBtn" class="startBtn btn">Start Quiz</button>
+      <button id="nextBtn" class="nextBtn btn hide">Next</button>
     </div>
-
-
-    <script src="./assets/script.js"></script>
+  </div>
+  <script src="assets/script.js"></script>
 </body>
 </html>
